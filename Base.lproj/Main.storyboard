@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="exS-36-Gwr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gaze View-->
+        <scene sceneID="ypV-VY-V1T">
+            <objects>
+                <viewController id="LI8-pA-rHz" customClass="GazeView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p5e-IE-Z7X"/>
+                        <viewControllerLayoutGuide type="bottom" id="N1N-Tb-gWm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0K0-H9-Hjm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-7c-hxt">
+                                <rect key="frame" x="126" y="114" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="gazeImageView" destination="HLw-7c-hxt" id="9Us-3j-rLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axx-jZ-tNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="647"/>
+        </scene>
+        <!--Recognition View-->
+        <scene sceneID="Ai5-zf-QNX">
+            <objects>
+                <viewController id="vwc-qs-707" customClass="RecognitionView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JN4-2r-ZSA"/>
+                        <viewControllerLayoutGuide type="bottom" id="msu-kM-gQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cdf-xo-UXK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq1-o9-QW7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-0v-UOB">
+                                <rect key="frame" x="142" y="153" width="317" height="247"/>
+                                <animations/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Guess the Emotion!" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWb-4f-T9L">
+                                <rect key="frame" x="214" y="34" width="147" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki4-UX-eWE">
+                                <rect key="frame" x="76" y="447" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Happy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="happyPressed:" destination="vwc-qs-707" eventType="touchUpInside" id="xTT-WE-tIS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBF-gD-v2r">
+                                <rect key="frame" x="214" y="447" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Sad">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sadPressed:" destination="vwc-qs-707" eventType="touchUpInside" id="b6x-B0-PMW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTm-Nl-vxP">
+                                <rect key="frame" x="342" y="447" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Angry">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="angryPressed:" destination="vwc-qs-707" eventType="touchUpInside" id="nL5-a0-KaL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26q-F3-sT8">
+                                <rect key="frame" x="454" y="447" width="65" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Neutral">
+                                    <color key="titleColor" red="1" green="0.99142480479999995" blue="0.92517641080000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="neutralPressed:" destination="vwc-qs-707" eventType="touchUpInside" id="zTn-FG-o6g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifF-hS-MLE">
+                                <rect key="frame" x="267" y="503" width="56" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Disgust">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="disgustPressed:" destination="vwc-qs-707" eventType="touchUpInside" id="4Pb-v8-TcJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcF-6s-EdD">
+                                <rect key="frame" x="404" y="503" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Fear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fearPressed:" destination="vwc-qs-707" eventType="touchUpInside" id="3ht-JB-56N"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-zm-Txx">
+                                <rect key="frame" x="239" y="90" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v79-pD-P6M">
+                                <rect key="frame" x="130" y="503" width="77" height="28"/>
+                                <animations/>
+                                <state key="normal" title="Surprised">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="surprisePressed:" destination="vwc-qs-707" eventType="touchUpInside" id="L20-gt-2Aa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zq1-o9-QW7" firstAttribute="centerX" secondItem="Cdf-xo-UXK" secondAttribute="centerX" id="CzY-zJ-9sh"/>
+                            <constraint firstItem="zq1-o9-QW7" firstAttribute="centerY" secondItem="Cdf-xo-UXK" secondAttribute="centerY" id="Ddl-XG-otX"/>
+                            <constraint firstItem="1VN-0v-UOB" firstAttribute="centerX" secondItem="Cdf-xo-UXK" secondAttribute="centerX" id="Jya-4o-2db"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="angryButton" destination="HTm-Nl-vxP" id="XKu-HE-5RD"/>
+                        <outlet property="disgustButton" destination="ifF-hS-MLE" id="rjX-Go-uZb"/>
+                        <outlet property="fearButton" destination="VcF-6s-EdD" id="BoV-BV-YX3"/>
+                        <outlet property="guessText" destination="WWb-4f-T9L" id="ro3-Dv-n8M"/>
+                        <outlet property="happyButton" destination="ki4-UX-eWE" id="li2-G6-Kxf"/>
+                        <outlet property="neutralButton" destination="v79-pD-P6M" id="xLS-v9-iif"/>
+                        <outlet property="recBackView" destination="zq1-o9-QW7" id="bn3-ZZ-Vv2"/>
+                        <outlet property="recImageView" destination="1VN-0v-UOB" id="Hkl-YT-b4K"/>
+                        <outlet property="resultText" destination="wbR-zm-Txx" id="9re-iV-qst"/>
+                        <outlet property="sadButton" destination="HTm-Nl-vxP" id="8r5-wc-BAs"/>
+                        <outlet property="surpriseButton" destination="v79-pD-P6M" id="cCq-DI-2Fk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5JH-wm-dU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="-779"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGb-Az-i3j">
+                                <rect key="frame" x="126" y="61" width="391" height="334"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hq-M2-HK3">
+                                <rect key="frame" x="240" y="422" width="162" height="107"/>
+                                <animations/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="unh-QC-4eA">
+                                <rect key="frame" x="213" y="537" width="216" height="49"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="unh-QC-4eA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHx-gE-VA0"/>
+                            <constraint firstItem="OGb-Az-i3j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aqq-h5-ah6"/>
+                            <constraint firstItem="8hq-M2-HK3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rLs-r2-2Nl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="camView" destination="OGb-Az-i3j" id="8o4-aR-Kds"/>
+                        <outlet property="resultText" destination="unh-QC-4eA" id="j9v-Gu-wk0"/>
+                        <outlet property="resultView" destination="8hq-M2-HK3" id="Lk7-Vo-EGJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="-70"/>
+        </scene>
+        <!--Launch View-->
+        <scene sceneID="TO0-xM-hpg">
+            <objects>
+                <viewController title="Launch View" id="fpE-aY-bcG" customClass="LaunchView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhK-Ax-9r6"/>
+                        <viewControllerLayoutGuide type="bottom" id="eP2-73-g59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WMi-aQ-Uqc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-yV-AdB">
+                                <rect key="frame" x="-29" y="0.0" width="629" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="EmoTrain" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qMI-vn-BYy">
+                                <rect key="frame" x="251" y="50" width="81" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBi-nq-BaZ">
+                                <rect key="frame" x="267" y="524" width="36" height="30"/>
+                                <animations/>
+                                <state key="normal" title="PLAY"/>
+                                <connections>
+                                    <segue destination="exS-36-Gwr" kind="show" id="Du1-sI-TC9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qMI-vn-BYy" firstAttribute="centerX" secondItem="WMi-aQ-Uqc" secondAttribute="centerX" id="8br-dX-30p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LaunchImage" destination="BFw-yV-AdB" id="PSK-e2-pmF"/>
+                        <outlet property="playButton" destination="XBi-nq-BaZ" id="TC4-uE-ivD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQx-OZ-hSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-389" y="-58"/>
+        </scene>
+        <!--Training Area-->
+        <scene sceneID="w9B-lc-nOb">
+            <objects>
+                <viewController title="Training Area" id="exS-36-Gwr" customClass="TrainingArea" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xzv-z4-kAb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ldJ-sG-gvq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="seS-lC-4yz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmN-9L-LPg">
+                                <rect key="frame" x="235" y="52" width="130" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Learn Expressions!"/>
+                                <connections>
+                                    <segue destination="vwc-qs-707" kind="show" id="Zno-D7-fer"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd2-mW-3Gb">
+                                <rect key="frame" x="235" y="235" width="132" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Mimic Expressions!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="WMO-eU-yrQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-9w-Nbv">
+                                <rect key="frame" x="260" y="383" width="82" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Learn Gaze!"/>
+                                <connections>
+                                    <segue destination="LI8-pA-rHz" kind="show" id="NfI-Ra-4EJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LmN-9L-LPg" firstAttribute="centerX" secondItem="seS-lC-4yz" secondAttribute="centerX" id="62m-1Q-Wdg"/>
+                            <constraint firstItem="Qc9-9w-Nbv" firstAttribute="centerX" secondItem="seS-lC-4yz" secondAttribute="centerX" id="AYF-92-QXv"/>
+                            <constraint firstItem="rd2-mW-3Gb" firstAttribute="centerX" secondItem="seS-lC-4yz" secondAttribute="centerX" id="CCJ-nd-QDQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qc9-9w-Nbv" secondAttribute="trailing" constant="238" id="KXt-da-TQp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="learnEmoButton" destination="LmN-9L-LPg" id="tUT-1h-Ncw"/>
+                        <outlet property="learnGazeButton" destination="Qc9-9w-Nbv" id="4WH-VC-7nQ"/>
+                        <outlet property="mimicEmoButton" destination="rd2-mW-3Gb" id="inn-cf-wXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0O-o3-X6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="-63"/>
+        </scene>
+    </scenes>
+</document>
